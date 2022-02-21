@@ -4,9 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8%22"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.9.8"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
+    <!--
+        RenderSection is a way of allowing statements/code/tags to be placed in a
+            certain area of the layout.
+        By default this is a required entry in each content page. Using required: false
+            Makes this an optional entry on any content page.
+        If the section is used in a content page, then the code within the section
+            reference on the content page is merged in place here on the layout page.
+            
+    -->
+    @RenderSection("CustomCSS", required: false)
 </head>
 <body>
     <header>
@@ -35,7 +45,12 @@
                 <li>
                     <span>Samples</span>
                     <ul>
-                        <a asp-area="" asp-page="/SamplePages/Basics">Basics</a>
+                        <li>
+                            <a asp-area="" asp-page="/SamplePages/Basics">Basics</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-page="/SamplePages/Controls">Controls</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
