@@ -24,7 +24,6 @@ namespace WebApp.Pages
         #endregion
 
         #region Feedback and ErrorHandling
-        [TempData]
         public string FeedBack { get; set; }
         public bool HasFeedback => !string.IsNullOrEmpty(FeedBack);
         #endregion

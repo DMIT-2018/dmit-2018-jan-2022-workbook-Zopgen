@@ -11,7 +11,8 @@ namespace ChinookSystem.ViewModels
     {
         //common class used to hold 2 values for use in a select list scenario
         //  such as a drop down list
-        public int ValueID { get; set; }
+        public int ValueId { get; set; }
         public string DisplayText { get; set; }
+
     }
 }

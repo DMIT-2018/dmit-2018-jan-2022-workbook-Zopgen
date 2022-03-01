@@ -33,7 +33,7 @@ namespace ChinookSystem.BLL
             IEnumerable<SelectionList> info = _context.Genres
                                                 .Select(g => new SelectionList
                                                 {
-                                                    ValueID = g.GenreId,
+                                                    ValueId = g.GenreId,
                                                     DisplayText = g.Name
 
                                                 });
